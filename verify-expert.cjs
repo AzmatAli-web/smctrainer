@@ -1,6 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const context={window:{}};vm.createContext(context);
-for(const f of ['scenarios.js','expert-scenarios.js'])vm.runInContext(fs.readFileSync(`dist/${f}`,'utf8'),context);
+for(const f of ['scenarios.js','expert-scenarios.js'])vm.runInContext(fs.readFileSync(`dist/hard/${f}`,'utf8'),context);
 const {scenarios,levels,defaultIndex,gradeAssessment}=context.window.LAB;
 assert.equal(scenarios.length,35);assert.equal(levels.length,5);assert.equal(defaultIndex,28);
 const experts=scenarios.filter(s=>s.mode==='assessment');

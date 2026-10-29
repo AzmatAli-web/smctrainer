@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101419">
+  <meta name="description" content="Your private, interactive market structure practice room. Learn BOS, CHoCH, liquidity sweeps, order blocks, displacement and fair value gaps on synthetic charts.">
+  <title>Structure Lab — Easy · Original</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23b3a0ff'/%3E%3Cpath d='M10 7v18m12-18v18M7 12h6v8H7zm12-2h6v8h-6z' stroke='%23101419' fill='none' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#practice" aria-label="Structure Lab home"><span class="brand-mark"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M9 5v20m12-20v20M6 10h6v9H6zm12-3h6v10h-6z"/></svg></span><span>structure<span class="brand-light">lab</span><small>THE SMC PRACTICE ROOM</small></span></a>
+      <span class="nav-label">WORKSPACE</span>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-page="practice"><span class="nav-icon">⌘</span>Practice<span class="nav-tag">21</span></button>
+        <button class="nav-item" data-page="notes"><span class="nav-icon">▤</span>Field notes</button>
+        <button class="nav-item" data-page="progress"><span class="nav-icon">▥</span>Your progress</button>
+      </nav>
+      <div class="sidebar-section"><span class="nav-label">YOUR LEARNING PATH</span><div id="learning-path"></div></div>
+      <div class="sidebar-bottom"><div class="private-indicator"><span class="status-dot"></span>Private workspace</div><p>Small repetitions.<br>Sharper observations.</p><div class="profile"><span class="avatar">A</span><div>Azmat’s practice room<small>Progress saved on this device</small></div></div></div>
+    </aside>
+    <main>
+      <header class="topbar"><span id="breadcrumb">Workspace <span>/</span> Practice</span><div class="top-meta"><a class="version-return" href="../">← Choose version</a><span class="status-dot"></span>SIMULATED MARKET<span class="keycap" title="Use Enter to check an answer">↵</span></div></header>
+      <div id="content"></div>
+      <footer class="app-footer"><span>Built for deliberate practice.</span><span>Synthetic prices · Educational exercises · No live orders</span></footer>
+    </main>
+  </div>
+  <dialog id="curriculum-dialog"><div class="dialog-head"><div><span class="eyebrow">THE LEARNING PATH</span><h2>21 ways to read the chart.</h2></div><button class="icon-button" id="close-dialog" aria-label="Close scenario library">×</button></div><p class="muted">Start with foundations, then add context and challenge your assumptions.</p><div id="curriculum-list"></div></dialog>
+  <dialog id="reset-dialog"><h2>Start fresh?</h2><p>This clears your saved answers and progress on this device.</p><div class="dialog-actions"><button class="secondary" id="cancel-reset">Keep progress</button><button class="primary" id="confirm-reset">Reset progress</button></div></dialog>
+  <div id="toast" role="status"></div>
+  <script src="../version-state.js" data-trainer-version="easy"></script>
+  <script src="scenarios.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

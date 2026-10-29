@@ -4,35 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#101419">
-  <meta name="description" content="Your private, interactive market structure practice room. Learn BOS, CHoCH, liquidity sweeps, order blocks, displacement and fair value gaps on synthetic charts.">
-  <title>Structure Lab — SMC Chart Trainer</title>
+  <meta name="description" content="Choose the original easy Structure Lab website or the newer difficult SMC chart trainer.">
+  <title>Structure Lab — Choose Your Version</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23b3a0ff'/%3E%3Cpath d='M10 7v18m12-18v18M7 12h6v8H7zm12-2h6v8h-6z' stroke='%23101419' fill='none' stroke-width='2'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hub.css">
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <a class="brand" href="#practice" aria-label="Structure Lab home"><span class="brand-mark"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M9 5v20m12-20v20M6 10h6v9H6zm12-3h6v10h-6z"/></svg></span><span>structure<span class="brand-light">lab</span><small>THE SMC PRACTICE ROOM</small></span></a>
-      <span class="nav-label">WORKSPACE</span>
-      <nav aria-label="Main navigation">
-        <button class="nav-item active" data-page="practice"><span class="nav-icon">⌘</span>Practice<span class="nav-tag">35</span></button>
-        <button class="nav-item" data-page="notes"><span class="nav-icon">▤</span>Field notes</button>
-        <button class="nav-item" data-page="progress"><span class="nav-icon">▥</span>Your progress</button>
-      </nav>
-      <div class="sidebar-section"><span class="nav-label">YOUR LEARNING PATH</span><div id="learning-path"></div></div>
-      <div class="sidebar-bottom"><div class="private-indicator"><span class="status-dot"></span>Private workspace</div><p>Small repetitions.<br>Sharper observations.</p><div class="profile"><span class="avatar">A</span><div>Azmat’s practice room<small>Progress saved on this device</small></div></div></div>
-    </aside>
-    <main>
-      <header class="topbar"><span id="breadcrumb">Workspace <span>/</span> Practice</span><div class="top-meta"><span class="status-dot"></span>SIMULATED MARKET<span class="keycap" title="Use Enter to check an answer">↵</span></div></header>
-      <div id="content"></div>
-      <footer class="app-footer"><span>Built for deliberate practice.</span><span>Synthetic prices · Educational exercises · No live orders</span></footer>
-    </main>
-  </div>
-  <dialog id="curriculum-dialog"><div class="dialog-head"><div><span class="eyebrow">THE LEARNING PATH</span><h2>Choose your difficulty.</h2></div><button class="icon-button" id="close-dialog" aria-label="Close scenario library">×</button></div><p class="muted">14 blind expert assessments. Exact marks, calculations, and strict full-credit grading. Earlier levels remain available.</p><div id="curriculum-list"></div></dialog>
-  <dialog id="reset-dialog"><h2>Start fresh?</h2><p>This clears your saved answers and progress on this device.</p><div class="dialog-actions"><button class="secondary" id="cancel-reset">Keep progress</button><button class="primary" id="confirm-reset">Reset progress</button></div></dialog>
-  <div id="toast" role="status"></div>
-  <script src="scenarios.js"></script>
-  <script src="expert-scenarios.js"></script>
-  <script src="app.js"></script>
+  <header class="site-header"><a class="brand" href="./" aria-label="Structure Lab home"><span class="brand-mark"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M9 5v20m12-20v20M6 10h6v9H6zm12-3h6v10h-6z"/></svg></span><span>structure<span class="brand-light">lab</span><small>THE SMC PRACTICE ROOM</small></span></a><span class="header-note"><span class="status-dot"></span>YOUR MARKET STRUCTURE LAB</span></header>
+  <main>
+    <section class="intro" aria-labelledby="page-title"><div class="eyebrow">PICK YOUR PRACTICE ROOM</div><h1 id="page-title">One lab. Two ways to practice.</h1><p>The original guided website, or the newer difficult version.<br>Choose where you want to train today.</p></section>
+    <section class="versions" aria-label="Choose a trainer website">
+      <article class="version-card easy"><div class="card-body"><div class="card-top"><span class="edition-label">THE ORIGINAL WEBSITE</span><span class="edition-badge">Guided learning</span></div><h2>Easy</h2><p>Clear reference levels, helpful hints, and one concept at a time. Build your understanding with the original trainer.</p></div><div class="chart-preview" aria-hidden="true"><span class="chart-label">GUIDED CHART PRACTICE</span><svg viewBox="0 0 520 155" preserveAspectRatio="none"><path d="M0 45H520M0 85H520M0 125H520M65 0V155M165 0V155M265 0V155M365 0V155M465 0V155" stroke="#24322b" stroke-width=".6"/><path d="M35 103V134M70 89V119M105 70V104M140 88V119M175 93V125M210 75V108M245 55V87M280 68V100M315 78V110M350 57V91M385 22V77M420 15V44M455 25V58M490 18V51" stroke="#70cca7" stroke-width="1.5"/><g fill="#6dcaab"><path d="M29 111h12v15H29zM64 98h12v15H64zM99 79h12v19H99zM204 82h12v19h-12zM239 62h12v19h-12zM344 64h12v20h-12zM379 31h12v40h-12zM414 23h12v15h-12zM484 24h12v20h-12z"/></g><g fill="#ce8590"><path d="M134 93h12v20h-12zM169 101h12v18h-12zM274 75h12v19h-12zM309 85h12v18h-12zM449 32h12v20h-12z"/></g><path d="M245 54H492" stroke="#ae96d4" stroke-width="1" stroke-dasharray="5 4"/><text x="258" y="46" fill="#b5a0ce" font-family="ui-monospace,monospace" font-size="8">Reference swing high</text></svg></div><div class="card-bottom"><ul class="feature-list"><li>21 scenarios</li><li>Hints available</li><li>Instant explanations</li></ul><a class="open-version" href="easy/" id="open-easy">Open easy version <span aria-hidden="true">→</span></a><div class="version-caption"><i></i>The first Structure Lab you practiced with</div></div></article>
+      <article class="version-card hard"><div class="card-body"><div class="card-top"><span class="edition-label">THE NEW DIFFICULT WEBSITE</span><span class="edition-badge">Expert & Gauntlet</span></div><h2>Hard</h2><p>Dense charts, independent marks, exact prices, and strict assessments. Prove every part of your analysis in the newer trainer.</p></div><div class="chart-preview" aria-hidden="true"><span class="chart-label">BLIND MULTI-PART ASSESSMENTS</span><svg viewBox="0 0 520 155" preserveAspectRatio="none"><path d="M0 45H520M0 85H520M0 125H520M65 0V155M165 0V155M265 0V155M365 0V155M465 0V155" stroke="#2b2836" stroke-width=".6"/><g stroke="#bb879c" stroke-width="1"><path d="M24 36V59M38 45V67M52 43V68M66 51V79M80 53V77M94 46V72M108 63V91M122 78V98M136 71V103M150 85V114M164 75V103M178 82V112M192 96V123M206 89V121M220 79V113M234 68V102M248 79V107M262 88V119M276 101V129M290 105V138M304 111V139M318 100V129M332 96V127M346 100V132M360 85V118M374 84V121M388 91V127M402 90V115M416 68V107M430 75V106M444 84V113M458 79V112M472 74V107M486 69V101M500 76V107"/></g><g fill="#cb8794"><path d="M21 42h6v11h-6zM35 50h6v11h-6zM63 56h6v17h-6zM105 69h6v16h-6zM119 84h6v8h-6zM147 91h6v17h-6zM175 89h6v17h-6zM189 102h6v15h-6zM245 85h6v16h-6zM259 95h6v18h-6zM273 107h6v16h-6zM287 112h6v19h-6zM301 117h6v15h-6zM343 106h6v20h-6zM385 98h6v23h-6zM427 82h6v18h-6zM441 90h6v17h-6zM497 83h6v18h-6z"/></g><g fill="#70ba9e"><path d="M49 49h6v12h-6zM77 59h6v12h-6zM91 53h6v13h-6zM133 78h6v19h-6zM161 82h6v15h-6zM203 96h6v19h-6zM217 86h6v21h-6zM231 75h6v21h-6zM315 107h6v16h-6zM329 103h6v18h-6zM357 92h6v20h-6zM371 91h6v24h-6zM399 96h6v13h-6zM413 75h6v26h-6zM455 86h6v20h-6zM469 81h6v20h-6zM483 76h6v19h-6z"/></g></svg></div><div class="card-bottom"><ul class="feature-list"><li>14 blind assessments</li><li>54–68 candles</li><li>Strict multi-part grading</li></ul><a class="open-version" href="hard/" id="open-hard">Open difficult version <span aria-hidden="true">→</span></a><div class="version-caption"><i></i>Starts in the hardest tier: Gauntlet</div></div></article>
+    </section>
+    <p class="switch-note"><span>↔</span>Both versions keep their own progress on this browser.<br>Use “Choose version” inside either website to switch.</p>
+  </main>
+  <footer class="site-footer"><strong>Built for deliberate practice.</strong><span>Synthetic charts · Educational exercises · No live orders</span></footer>
 </body>
 </html>

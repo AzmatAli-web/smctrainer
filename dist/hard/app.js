@@ -2,12 +2,12 @@
   'use strict';
   const {scenarios,concepts,levels}=window.LAB;
   const $=s=>document.querySelector(s);
-  const storageKey='structure-lab-v1';
+  const storageKey='structure-lab-hard-v1';
   let storageAvailable=true;
   let saved={};
   try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}')||{};}catch{storageAvailable=false;}
   const DEFAULT=window.LAB.defaultIndex, TOTAL=scenarios.length;
-  const state={page:'practice',current:saved.expertIntroduced&&Number.isInteger(saved.current)&&saved.current>=0&&saved.current<TOTAL?saved.current:DEFAULT,records:saved.records&&typeof saved.records==='object'?saved.records:{},history:Array.isArray(saved.history)?saved.history:[],selection:null,submitted:false,hint:false,guides:true,showOhlc:false,retry:false,activeStep:null};
+  const state={page:'practice',current:saved.expertIntroduced&&Number.isInteger(saved.current)&&saved.current>=21&&saved.current<TOTAL?saved.current:DEFAULT,records:saved.records&&typeof saved.records==='object'?saved.records:{},history:Array.isArray(saved.history)?saved.history:[],selection:null,submitted:false,hint:false,guides:true,showOhlc:false,retry:false,activeStep:null};
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const num=n=>Number(n).toFixed(2);
   const current=()=>scenarios[state.current];

@@ -3,7 +3,7 @@ const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const context = {window:{}};
 vm.createContext(context);
-vm.runInContext(fs.readFileSync('dist/scenarios.js','utf8'),context);
+vm.runInContext(fs.readFileSync('dist/easy/scenarios.js','utf8'),context);
 const {scenarios,concepts} = context.window.LAB;
 assert.equal(scenarios.length,21);
 assert.equal(concepts.length,7);
