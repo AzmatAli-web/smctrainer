@@ -1,0 +1,13 @@
+{
+  "name": "smctrainer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Structure Lab: interactive SMC chart trainer with blind Gauntlet assessments",
+  "scripts": {
+    "test": "node verify.cjs && node verify-expert.cjs",
+    "check": "node --check dist/app.js && node --check dist/scenarios.js && node --check dist/expert-scenarios.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
